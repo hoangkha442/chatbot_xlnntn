@@ -10,7 +10,7 @@
 
 ## Giới thiệu
 
-Dự án này là một chatbot cho quán cà phê, xây dựng bằng Python và Gradio. Chatbot trả lời các câu hỏi về menu, giờ mở cửa, địa chỉ, giá cả, dịch vụ, v.v.
+Dự án này là một chatbot rule-based cho quán cà phê, xây dựng bằng Python và Gradio. Chatbot trả lời các câu hỏi về thực đơn, giờ mở cửa, địa chỉ, giá cả, dịch vụ, v.v.
 
 ## Yêu cầu hệ thống
 
@@ -41,7 +41,7 @@ Chatbot sử dụng các rule cố định để trả lời:
 
 | Từ khóa    | Trả lời                                                                          |
 | ---------- | -------------------------------------------------------------------------------- |
-| menu       | Quán có: cà phê đen, cà phê sữa, latte, cappuccino, trà đào, trà sữa, bánh ngọt. |
+| thực đơn   | Quán có: cà phê đen, cà phê sữa, latte, cappuccino, trà đào, trà sữa, bánh ngọt. |
 | giờ        | Quán mở từ 7h sáng đến 10h tối mỗi ngày.                                         |
 | địa chỉ    | Số 1, Đường Võ Văn Ngân, P. Thủ Đức, TP. Hồ Chí Minh.                            |
 | cà phê đen | Cà phê đen giá 25.000đ.                                                          |
@@ -58,20 +58,54 @@ Chatbot sử dụng các rule cố định để trả lời:
 
 Chatbot tự động ánh xạ các từ đồng nghĩa về từ chính để tăng độ chính xác:
 
-| Từ đồng nghĩa | Từ chính   |
-| ------------- | ---------- |
-| thời gian     | giờ        |
-| mấy giờ       | giờ        |
-| hoạt động     | giờ        |
-| ở đâu         | địa chỉ    |
-| chỗ nào       | địa chỉ    |
-| cafe          | cà phê     |
-| cafe sữa      | cà phê sữa |
-| coffee        | cà phê     |
-| ship hàng     | ship       |
-| giao hàng     | ship       |
-| trà           | trà đào    |
-| dessert       | bánh       |
+| Từ đồng nghĩa      | Từ chính   |
+| ------------------ | ---------- |
+| thực đơn           | menu       |
+| danh sách món      | menu       |
+| bảng giá           | menu       |
+| món ăn             | menu       |
+| order              | menu       |
+| thời gian          | giờ        |
+| mấy giờ            | giờ        |
+| hoạt động          | giờ        |
+| giờ giấc           | giờ        |
+| khi nào            | giờ        |
+| ở đâu              | địa chỉ    |
+| chỗ nào            | địa chỉ    |
+| chỗ                | địa chỉ    |
+| vị trí             | địa chỉ    |
+| nơi                | địa chỉ    |
+| location           | địa chỉ    |
+| map                | địa chỉ    |
+| cafe               | cà phê     |
+| coffee             | cà phê     |
+| caphe              | cà phê     |
+| cf                 | cà phê     |
+| phê                | cà phê     |
+| cà phê đen         | cà phê     |
+| cafe sữa           | cà phê sữa |
+| coffee milk        | cà phê sữa |
+| caphe sua          | cà phê sữa |
+| cf sữa             | cà phê sữa |
+| bạc xỉu            | cà phê sữa |
+| ship hàng          | ship       |
+| giao hàng          | ship       |
+| giao               | ship       |
+| shipper            | ship       |
+| vận chuyển         | ship       |
+| đem tới            | ship       |
+| giao tận nơi       | ship       |
+| trà                | trà đào    |
+| peach tea          | trà đào    |
+| trà vị đào         | trà đào    |
+| nước đào           | trà đào    |
+| trà trái đào       | trà đào    |
+| đào ngâm           | trà đào    |
+| dessert            | bánh       |
+| bánh ngọt          | bánh       |
+| đồ ngọt            | bánh       |
+| bánh kem           | bánh       |
+| bánh ngọt các loại | bánh       |
 
 ## Quy tắc hoạt động
 

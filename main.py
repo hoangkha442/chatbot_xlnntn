@@ -16,21 +16,61 @@ rules = {
     "ship": "Quán có dịch vụ giao hàng qua GrabFood và ShopeeFood."
 }
 
-# Từ đồng nghĩa → ánh xạ về từ chính
 synonyms = {
     "thực đơn":"menu",
+    "thực đơn": "menu",
+    "danh sách món": "menu",
+    "bảng giá": "menu",
+    "món ăn": "menu",
+    "order": "menu",
     "thời gian": "giờ",
     "mấy giờ": "giờ",
     "hoạt động": "giờ",
+    "mấy giờ": "giờ",
+    "thời gian": "giờ",
+    "giờ giấc": "giờ",
+    "hoạt động": "giờ",
+    "khi nào": "giờ",
     "ở đâu": "địa chỉ",
     "chỗ nào": "địa chỉ",
+    "chỗ": "địa chỉ",
+    "vị trí": "địa chỉ",
+    "nơi": "địa chỉ",
+    "location": "địa chỉ",
+    "map": "địa chỉ",
     "cafe": "cà phê",
-    "cafe sữa": "cà phê sữa",
     "coffee": "cà phê",
+    "cafe": "cà phê",
+    "caphe": "cà phê",
+    "cf": "cà phê",
+    "phê": "cà phê",
+    "cà phê đen": "cà phê",
+    "coffee": "cà phê",
+    "cafe sữa": "cà phê sữa",
+    "coffee milk": "cà phê sữa",
+    "cafe sữa": "cà phê sữa",
+    "caphe sua": "cà phê sữa",
+    "cf sữa": "cà phê sữa",
+    "bạc xỉu": "cà phê sữa",
     "ship hàng": "ship",
     "giao hàng": "ship",
-    "trà": "trà đào",  
-    "dessert": "bánh"
+    "giao": "ship",
+    "shipper": "ship",
+    "vận chuyển": "ship",
+    "đem tới": "ship",
+    "giao tận nơi": "ship",
+    "trà": "trà đào",
+    "peach tea": "trà đào",
+    "trà vị đào": "trà đào",
+    "nước đào": "trà đào",
+    "trà trái đào": "trà đào",
+    "đào ngâm": "trà đào",  
+    "dessert": "bánh",
+    "bánh ngọt": "bánh",
+    "dessert": "bánh",
+    "đồ ngọt": "bánh",
+    "bánh kem": "bánh",
+    "bánh ngọt các loại": "bánh"
 }
 
 # Fallback gợi ý
@@ -77,7 +117,7 @@ def chatbot_response(user_input, history=[], context=""):
 
 # Giao diện Gradio
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# ☕ Chatbot Quán Cà Phê (Rule-Based)")
+    gr.Markdown("# ☕ Chatbot Quán Cà Phê")
     gr.Markdown("Hỏi tôi về **menu, giờ mở cửa, địa chỉ, giá cà phê, trà, bánh, ship hàng...**")
 
     chatbot = gr.Chatbot(height=400)
@@ -86,7 +126,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         send = gr.Button("Gửi", scale=2)
     clear = gr.Button("Xóa hội thoại")
 
-    state = gr.State("")  # lưu ngữ cảnh
+    state = gr.State("") 
 
     send.click(chatbot_response, [msg, chatbot, state], [chatbot, chatbot, state, msg])
     msg.submit(chatbot_response, [msg, chatbot, state], [chatbot, chatbot, state, msg])
