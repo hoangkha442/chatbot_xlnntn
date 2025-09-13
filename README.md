@@ -1,12 +1,20 @@
-# Chatbot Quán Cà Phê (Rule-Based)
+# Chatbot Quán Cà Phê
+
+## Thành viên nhóm
+
+| MSSV    | Họ và Tên        |
+| ------- | ---------------- |
+| 2591306 | Châu Hoàng Kha   |
+| 2591314 | Trần Thị Bảo My  |
+| 2591320 | Nguyễn Thành Quí |
 
 ## Giới thiệu
 
-Dự án này là một chatbot rule-based cho quán cà phê, xây dựng bằng Python và Gradio. Chatbot trả lời các câu hỏi về menu, giờ mở cửa, địa chỉ, giá cả, dịch vụ, v.v.
+Dự án này là một chatbot cho quán cà phê, xây dựng bằng Python và Gradio. Chatbot trả lời các câu hỏi về menu, giờ mở cửa, địa chỉ, giá cả, dịch vụ, v.v.
 
 ## Yêu cầu hệ thống
 
-- Python >= 3.7
+- Python >= 3.9
 - Các thư viện trong `requirements.txt` (Gradio, difflib)
 
 ## Cài đặt
@@ -86,15 +94,3 @@ Chatbot tự động ánh xạ các từ đồng nghĩa về từ chính để t
 - Khung chat hiển thị hội thoại
 - Ô nhập câu hỏi
 - Nút gửi và nút xóa hội thoại
-
-## Đóng góp
-
-Mọi đóng góp vui lòng gửi pull request hoặc liên hệ qua email bên dưới.
-
-## Liên hệ
-
-- Email: your-email@example.com
-
-## Giấy phép
-
-Dự án phát hành theo giấy phép MIT.

@@ -18,6 +18,7 @@ rules = {
 
 # Từ đồng nghĩa → ánh xạ về từ chính
 synonyms = {
+    "thực đơn":"menu",
     "thời gian": "giờ",
     "mấy giờ": "giờ",
     "hoạt động": "giờ",
@@ -28,7 +29,7 @@ synonyms = {
     "coffee": "cà phê",
     "ship hàng": "ship",
     "giao hàng": "ship",
-    "trà": "trà đào",  # nếu chỉ nói "trà" → gợi ý trà đào
+    "trà": "trà đào",  
     "dessert": "bánh"
 }
 
