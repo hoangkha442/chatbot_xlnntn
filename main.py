@@ -133,4 +133,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     clear.click(lambda: (None, None, "", ""), None, [chatbot, chatbot, state, msg], queue=False)
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(share=True)

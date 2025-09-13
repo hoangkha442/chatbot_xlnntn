@@ -10,7 +10,10 @@
 
 ## Giới thiệu
 
-Dự án này là một chatbot rule-based cho quán cà phê, xây dựng bằng Python và Gradio. Chatbot trả lời các câu hỏi về thực đơn, giờ mở cửa, địa chỉ, giá cả, dịch vụ, v.v.
+Dự án này là một chatbot rule-based cho quán cà phê, xây dựng bằng Python và Gradio. Chatbot trả lời nhanh các câu hỏi thường gặp của khách (FAQ) về quán cà phê: menu, giá, giờ mở cửa, địa chỉ, ship hàng…
+Giảm tải công việc lặp lại cho nhân viên.
+Cung cấp trải nghiệm tiện lợi, trực quan cho khách hàng ngay cả khi ngoài giờ.
+Làm bước thử nghiệm (prototype) trước khi triển khai AI ChatBot phức tạp hơn.
 
 ## Yêu cầu hệ thống
 
